@@ -18,6 +18,12 @@ import { Component } from '@angular/core';
         padding: 10px;
       }
     `,
+
+    `
+      .card-button-cancel {
+        background-color: red;
+      }
+    `,
   ],
 })
 export class CardButtonCancelComponent {}
