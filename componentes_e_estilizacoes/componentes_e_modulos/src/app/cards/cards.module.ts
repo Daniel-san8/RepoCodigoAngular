@@ -13,11 +13,6 @@ import { CardRoxoButtonComponent } from '../card-roxo-button/card-roxo-button.co
     CardRoxoButtonComponent,
   ],
   imports: [CommonModule],
-  exports: [
-    CardComponent,
-    CardRoxoComponent,
-    CardButtonComponent,
-    CardRoxoButtonComponent,
-  ],
+  exports: [CardComponent, CardRoxoComponent, CardButtonComponent],
 })
 export class CardsModule {}
