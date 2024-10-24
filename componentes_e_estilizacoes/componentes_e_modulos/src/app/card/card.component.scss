@@ -21,6 +21,13 @@
   }
 }
 
-::ng-deep app-card-button-cancel .card-button-cancel {
+//ng deep para estilos globais
+
+// ::ng-deep app-card-button-cancel .card-button-cancel {
+//   background-color: red !important;
+// }
+
+//host para local
+:host ::ng-deep app-card-button-cancel .card-button-cancel {
   background-color: red !important;
 }
