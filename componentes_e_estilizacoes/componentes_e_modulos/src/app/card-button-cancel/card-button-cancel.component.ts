@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './card-button-cancel.component.html',
   styleUrls: [
     './card-button-cancel.component.scss',
-    './card-button-cancel2.component.scss',
+    // './card-button-cancel2.component.scss',
   ],
   //usando propriedade styles para estilizar no ts
   // styles: [
