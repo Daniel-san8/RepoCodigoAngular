@@ -31,3 +31,7 @@
 // :host ::ng-deep app-card-button-cancel .card-button-cancel {
 //   background-color: red !important;
 // }
+
+:host ::ng-deep .mdc-slider__track--active_fill {
+  border-color: green !important;
+}
