@@ -16,4 +16,12 @@ export class AppComponent {
   disabledInput() {
     this.isDisabled = true;
   }
+
+  mudarTipo() {
+    if (this.inputType === 'text') {
+      this.inputType = 'password';
+    } else {
+      this.inputType = 'text';
+    }
+  }
 }
