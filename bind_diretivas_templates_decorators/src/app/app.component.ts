@@ -24,4 +24,10 @@ export class AppComponent {
       this.inputType = 'text';
     }
   }
+
+  handleKeyUp(e: KeyboardEvent) {
+    const input = e.target as HTMLInputElement;
+
+    this.inputText = input.value;
+  }
 }
