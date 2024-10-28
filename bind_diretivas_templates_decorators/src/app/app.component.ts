@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   inputText = 'texto inicial alterado';
   inputType = 'text';
-  isDisabled = true;
+  isDisabled = false;
+
+  enabledInput() {
+    this.isDisabled = false;
+  }
+  disabledInput() {
+    this.isDisabled = true;
+  }
 }

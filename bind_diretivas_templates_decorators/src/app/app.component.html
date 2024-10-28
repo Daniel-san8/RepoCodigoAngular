@@ -1,3 +1,5 @@
-<input type="{{ inputType }}" id="meu-input" value='{{ inputText }}' disabled="{{ isDisabled }}">
+<input [type]='inputType' id="meu-input" [value]="inputText" [disabled]='isDisabled'>
 
-<!-- [value]={{ inputText }} -->
+
+<button (click)="disabledInput()">desabilitar</button>
+<button (click)="enabledInput()">habilitar</button>
