@@ -9,7 +9,8 @@ export class AppComponent {
   inputText = 'texto inicial alterado';
   inputType = 'text';
   isDisabled = false;
-
+  buttonTitle = 'title do botão';
+  buttonDisabled = false;
   enabledInput() {
     this.isDisabled = false;
   }

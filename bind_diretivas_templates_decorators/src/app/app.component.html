@@ -4,3 +4,7 @@
 <button (click)="disabledInput()">desabilitar</button>
 <button (click)="enabledInput()">habilitar</button>
 <button (click)="mudarTipo()">mudar tipo</button>
+
+
+<button [attr.title]="buttonTitle">title</button>
+<button [attr.disabled]="buttonDisabled ? true : null">disabled</button>
