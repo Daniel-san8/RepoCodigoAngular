@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'bind_diretivas_templates_decorators';
+  inputText = 'texto inicial alterado';
+  inputType = 'text';
+  isDisabled = true;
 }
