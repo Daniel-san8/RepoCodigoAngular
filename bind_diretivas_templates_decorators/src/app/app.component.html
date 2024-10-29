@@ -1,10 +1,10 @@
 <input [type]="inputType" id="meu-input" [value]="inputText" [disabled]="isDisabled" (keyup)="handleKeyUp($event)">
 
 
-<button (click)="disabledInput()">desabilitar</button>
+<button (click)="disabledInput()" [style.color]="'red'">desabilitar</button>
 <button (click)="enabledInput()">habilitar</button>
 <button (click)="mudarTipo()">mudar tipo</button>
 
 
-<button [attr.title]="buttonTitle">title</button>
+<button [attr.title]="buttonTitle" [style.fontSize]="'100px'">title</button>
 <button [attr.disabled]="buttonDisabled ? true : null">disabled</button>
