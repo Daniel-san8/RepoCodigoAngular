@@ -11,6 +11,12 @@ export class AppComponent {
   isDisabled = false;
   buttonTitle = 'title do botão';
   buttonDisabled = false;
+  isActive = false;
+
+  mudarStatus() {
+    this.isActive = !this.isActive;
+  }
+
   enabledInput() {
     this.isDisabled = false;
   }
