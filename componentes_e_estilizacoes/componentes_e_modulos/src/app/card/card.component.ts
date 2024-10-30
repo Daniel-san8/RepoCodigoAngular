@@ -9,6 +9,10 @@ interface IInfos {
   preco: number;
 }
 
+function upperValue(value: string) {
+  return value.toUpperCase();
+}
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -24,15 +28,21 @@ export class CardComponent {
   //   },
   // };
 
-  private _planType = '';
+  // private _planType = '';
 
-  @Input('planType') set planType(value: string) {
-    this._planType = value.toUpperCase();
-  }
+  @Input({
+    alias: 'planType',
+    transform: (value: string) => upperValue(value),
+  })
+  planType = '';
 
-  get planType(): string {
-    return this._planType;
-  }
+  // @Input('planType') set planType(value: string) {
+  //   this._planType = value.toUpperCase();
+  // }
+
+  // get planType(): string {
+  //   return this._planType;
+  // }
 
   @Input({ required: true, alias: 'planPrice' }) planPrice: number = 0;
 
