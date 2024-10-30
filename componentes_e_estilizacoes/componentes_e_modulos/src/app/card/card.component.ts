@@ -1,4 +1,9 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  Input,
+  numberAttribute,
+  ViewEncapsulation,
+} from '@angular/core';
 
 interface IPlano {
   infos: IInfos;
@@ -44,7 +49,8 @@ export class CardComponent {
   //   return this._planType;
   // }
 
-  @Input({ required: true, alias: 'planPrice' }) planPrice: number = 0;
+  @Input({ required: true, alias: 'planPrice', transform: numberAttribute })
+  planPrice: number = 0;
 
   buttonClicked(eve: boolean) {
     console.log('buttonClicked');
