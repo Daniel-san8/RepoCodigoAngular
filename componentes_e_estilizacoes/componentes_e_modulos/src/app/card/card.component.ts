@@ -26,4 +26,10 @@ export class CardComponent {
 
   @Input('planType') planType: string = '';
   @Input({ required: true, alias: 'planPrice' }) planPrice: number = 0;
+
+  buttonClicked(eve: boolean) {
+    console.log('buttonClicked');
+
+    console.log(eve);
+  }
 }
