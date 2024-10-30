@@ -24,6 +24,6 @@ export class CardComponent {
   //   },
   // };
 
-  @Input() planType: string = '';
-  @Input() planPrice: number = 0;
+  @Input('planType') planType: string = '';
+  @Input({ required: true, alias: 'planPrice' }) planPrice: number = 0;
 }
