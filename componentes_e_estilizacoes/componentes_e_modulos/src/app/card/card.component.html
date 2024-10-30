@@ -1,12 +1,15 @@
 <div class="card">
-  <div class="card__plan card__item">Plano <b>{{ plano.infos.tipo ? plano.infos.tipo : 'nao existe' }}</b></div>
-  <div class="card__price card__item">R${{ plano.infos.preco ? plano.infos.preco : 'nao existe' }},00/Mês</div>
+  <div class="card__plan card__item">Plano <b>{{ planType }}</b></div>
+  <div class="card__price card__item">R${{planPrice}},00/Mês</div>
   <app-card-button></app-card-button>
-  <app-card-button-cancel></app-card-button-cancel>
 
 
-  <mat-slider min="1" max="5" step="0.5" value="1.5">
+  <!-- <mat-slider min="1" max="5" step="0.5" value="1.5">
     <input matSliderThumb>
-  </mat-slider>
+  </mat-slider> -->
 
 </div>
+
+<!-- <div class="card__plan card__item">Plano <b>{{ plano.infos.tipo ? plano.infos.tipo : 'nao existe' }}</b></div> -->
+<!-- <div class="card__price card__item">R${{ plano.infos.preco ? plano.infos.preco : 'nao existe' }},00/Mês</div> -->
+<!-- <app-card-button-cancel></app-card-button-cancel> -->

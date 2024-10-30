@@ -6,8 +6,7 @@
 <button (click)="mudarTipo()">mudar tipo</button>
 
 
-<button [attr.title]="buttonTitle" [style.fontSize]="'50px'"
-  [class]="isActive ? 'corVerde' : 'sem classe'">title</button>
+<button [attr.title]="buttonTitle" [style.fontSize]="'50px'" [class]="isActive ? 'corVerde' : null">title</button>
 <button [attr.disabled]="buttonDisabled ? true : null">disabled</button>
 
 <button (click)="mudarStatus()">Ativar classe</button>
