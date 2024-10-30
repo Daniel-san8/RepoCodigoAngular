@@ -7,9 +7,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './card-button.component.scss',
 })
 export class CardButtonComponent {
+  isBool = false;
   @Output('clickEmmiter') buttonClickEmitter = new EventEmitter<boolean>();
   onButtonClick() {
     console.log('onButtonClick');
-    this.buttonClickEmitter.emit(true);
+    this.buttonClickEmitter.emit(this.isBool);
+    this.isBool = !this.isBool;
   }
 }

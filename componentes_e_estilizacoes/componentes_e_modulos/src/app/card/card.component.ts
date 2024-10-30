@@ -24,12 +24,23 @@ export class CardComponent {
   //   },
   // };
 
-  @Input('planType') planType: string = '';
+  private _planType = '';
+
+  @Input('planType') set planType(value: string) {
+    this._planType = value.toUpperCase();
+  }
+
+  get planType(): string {
+    return this._planType;
+  }
+
   @Input({ required: true, alias: 'planPrice' }) planPrice: number = 0;
 
   buttonClicked(eve: boolean) {
     console.log('buttonClicked');
 
     console.log(eve);
+    // this.planType = 'opa';
+    // console.log('plantype: ' + this.planType);
   }
 }
