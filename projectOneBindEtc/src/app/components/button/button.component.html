@@ -1,1 +1,14 @@
-<button class="button button--{{ classButton }}">{{ buttonText }}</button>
+<button class="button" [ngClass]="{
+  'button--white': classButton === 'white' ? true : false,
+  'button--purple': classButton === 'purple' ? true : false
+}" (click)="onButtonClicked()">{{ buttonText }}</button>
+
+
+
+<!-- [class]="
+  {
+    'button--white': classButton === 'white' ? true : false,
+    'button--purple': classButton === 'purple' ? true : false
+  }
+
+" -->
