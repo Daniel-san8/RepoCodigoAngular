@@ -7,4 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input({ alias: 'buttonText', required: true }) buttonText = '';
+  @Input({ alias: 'classButton', required: true }) classButton:
+    | 'white'
+    | 'purple' = 'white';
 }
