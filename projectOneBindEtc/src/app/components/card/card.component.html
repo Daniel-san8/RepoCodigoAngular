@@ -1,5 +1,13 @@
-<div class="card">
+<div class="card" [ngClass]="{
+  'card--orange': cardStyle === 'orange',
+  'card--purple': cardStyle === 'purple'
+}">
   <div class="card__plan card__item">
-
+    Plano <b>{{ planType }}</b>
   </div>
+  <div class="card__price card__item">
+    R${{ planPrice }},00/Mês
+  </div>
+
+  <app-button [buttonText]="'Adquirir'" [classButton]="cardStyle === 'purple' ? 'purple' : 'white'"></app-button>
 </div>
