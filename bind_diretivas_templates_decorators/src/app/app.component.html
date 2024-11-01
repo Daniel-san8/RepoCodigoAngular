@@ -14,5 +14,7 @@
 
 <!-- TWO WAY DATA BINDING -->
 
-<h1>Nome: {{ valueInput }}</h1>
-<input type="text" [(ngModel)]="valueInput">
+<h1>Nome: {{ valueInput.name }}</h1>
+<input type="text" [(ngModel)]="valueInput.name">
+<h1>Senha: {{ valueInput.senha }}</h1>
+<input type="password" [(ngModel)]="valueInput.senha">
