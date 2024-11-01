@@ -1,4 +1,4 @@
-<input [type]="inputType" id="meu-input" [value]="inputText" [disabled]="isDisabled" (keyup)="handleKeyUp($event)">
+<!-- <input [type]="inputType" id="meu-input" [value]="inputText" [disabled]="isDisabled" (keyup)="handleKeyUp($event)">
 
 
 <button (click)="disabledInput()" [style.color]="'red'">desabilitar</button>
@@ -9,4 +9,10 @@
 <button [attr.title]="buttonTitle" [style.fontSize]="'50px'" [class]="isActive ? 'corVerde' : null">title</button>
 <button [attr.disabled]="buttonDisabled ? true : null">disabled</button>
 
-<button (click)="mudarStatus()">Ativar classe</button>
+<button (click)="mudarStatus()">Ativar classe</button> -->
+
+
+<!-- TWO WAY DATA BINDING -->
+
+<h1>Nome: {{ valueInput }}</h1>
+<input type="text" [(ngModel)]="valueInput">
