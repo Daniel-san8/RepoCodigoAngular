@@ -19,12 +19,18 @@
 <h1>Senha: {{ valueInput.senha }}</h1>
 <input type="password" [(ngModel)]="valueInput.senha">
 
-<div *ngIf="isActive; else templateElse">DIV PARA NGIF</div>
+<!-- <div *ngIf="isActive; else templateElse">DIV PARA NGIF</div> -->
 <ng-template #templateElse>
+  <div>
+    div caso seja true
+  </div>
+</ng-template><ng-template #templateElse2>
   <div>
     div caso seja false
   </div>
 </ng-template>
+
+<ng-container *ngIf="isActive; then templateElse; else templateElse2">DIV ORIGINAL</ng-container>
 
 <div>
   <button (click)="mudarStatus()">ativar div</button>
