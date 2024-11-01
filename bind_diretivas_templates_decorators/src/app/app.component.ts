@@ -17,6 +17,10 @@ export class AppComponent {
     senha: '',
   };
 
+  pessoa = {
+    name: 'Daniel San',
+  };
+
   mudarStatus() {
     this.isActive = !this.isActive;
   }

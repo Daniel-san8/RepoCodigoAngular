@@ -22,16 +22,22 @@
 <!-- <div *ngIf="isActive; else templateElse">DIV PARA NGIF</div> -->
 <ng-template #templateElse>
   <div>
-    div caso seja true
+    {{'DIV ORIGINAL' | lowercase}}
   </div>
 </ng-template><ng-template #templateElse2>
   <div>
-    div caso seja false
+    {{'div false' | uppercase}}
   </div>
 </ng-template>
 
-<ng-container *ngIf="isActive; then templateElse; else templateElse2">DIV ORIGINAL</ng-container>
+<ng-container *ngIf="isActive; then templateElse; else templateElse2"></ng-container>
 
 <div>
   <button (click)="mudarStatus()">ativar div</button>
 </div>
+
+
+<h1>começando pipes</h1>
+
+
+<h2>{{ pessoa | json }}</h2>
