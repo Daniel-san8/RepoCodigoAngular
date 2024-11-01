@@ -9,5 +9,6 @@
     R${{ planPrice }},00/Mês
   </div>
 
-  <app-button [buttonText]="'Adquirir'" [classButton]="cardStyle === 'purple' ? 'purple' : 'white'"></app-button>
+  <app-button [buttonText]="'Adquirir'" [classButton]="cardStyle === 'purple' ? 'purple' : 'white'"
+    (buttonClickedEmit)="onButtonCardClicked()"></app-button>
 </div>

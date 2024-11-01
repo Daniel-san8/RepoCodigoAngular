@@ -1,4 +1,8 @@
-<app-card [cardStyle]="'orange'" [planType]="'Simples'" [planPrice]="100"></app-card>
-<app-card [cardStyle]="'purple'" [planType]="'Completo'" [planPrice]="200"></app-card>
+<div class="cards-container">
+  <app-card [cardStyle]="cardObj.color" [planType]="cardObj.type" [planPrice]="cardObj.price"
+    (cardEmitt)="onAppButtonClicked()"></app-card>
+  <app-card [cardStyle]="'purple'" [planType]="'Completo'" [planPrice]="200"
+    (cardEmitt)="onAppButtonClicked()"></app-card>
 
+</div>
 <!-- [classButton]="'purple'" -->
