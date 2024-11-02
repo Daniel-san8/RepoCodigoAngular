@@ -21,6 +21,25 @@ export class AppComponent {
     name: 'Daniel San',
   };
 
+  listPessoas = [
+    {
+      name: 'Daniel San',
+      age: 21,
+    },
+    {
+      name: 'Fernando',
+      age: 4,
+    },
+    {
+      name: 'Joelma',
+      age: 11,
+    },
+    {
+      name: 'João',
+      age: 33,
+    },
+  ];
+
   mudarStatus() {
     this.isActive = !this.isActive;
   }

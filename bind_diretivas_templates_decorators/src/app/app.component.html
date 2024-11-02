@@ -41,3 +41,8 @@
 
 
 <h2>{{ pessoa | json }}</h2>
+
+
+<ng-container *ngFor="let person of listPessoas">
+  <h3>meu nome é: {{ person.name + ', minha idade é:' + person.age}} </h3>
+</ng-container>
