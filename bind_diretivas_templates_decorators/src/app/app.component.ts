@@ -16,11 +16,9 @@ export class AppComponent {
     name: '',
     senha: '',
   };
-
   pessoa = {
     name: 'Daniel San',
   };
-
   listPessoas = [
     {
       name: 'Daniel San',
@@ -39,6 +37,7 @@ export class AppComponent {
       age: 33,
     },
   ];
+  personSelectedIndex?: number;
 
   mudarStatus() {
     this.isActive = !this.isActive;
@@ -63,5 +62,9 @@ export class AppComponent {
     const input = e.target as HTMLInputElement;
 
     this.inputText = input.value;
+  }
+
+  selectPerson(index: number) {
+    this.personSelectedIndex = index;
   }
 }
