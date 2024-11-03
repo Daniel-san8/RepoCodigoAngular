@@ -6,6 +6,7 @@ import {MatInputModule} from '@angular/material/input';
 import { FormInputsComponent } from './form-inputs.component';
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [FormInputsComponent],
@@ -16,7 +17,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatFormFieldModule,
     MatIconModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   exports: [FormInputsComponent]
 })
