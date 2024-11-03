@@ -4,13 +4,16 @@
     margin: 0 2rem;
     justify-content: space-evenly;
     gap: 20rem;
-    &-data {
+    position: relative;
+    
+}
 
-    }
-
-    &-name {
-        flex-direction: column;
-    }
+.linha {
+    position: absolute;
+    height: 2px;
+    background-color: gray;
+    width: 100%;
+    left: 0;
 }
 
 
