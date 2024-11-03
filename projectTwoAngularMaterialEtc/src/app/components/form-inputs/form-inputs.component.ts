@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-form-inputs',
@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrl: './form-inputs.component.scss'
 })
 export class FormInputsComponent {
+
+  valuesInput: { name:string, status:'ativo' | 'inativo' | '' } = {
+    name: '',
+    status: ''
+  }
+
+  @Output() filterEmitt = new EventEmitter<string>()
+
+  filter () {
+    this.filterEmitt.emit(this.valuesInput.name)
+  }
 
 }

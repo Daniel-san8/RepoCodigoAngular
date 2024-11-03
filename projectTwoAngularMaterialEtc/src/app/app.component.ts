@@ -90,11 +90,23 @@ export class AppComponent {
     }
   ];
 
+  usersFiltered: IUser[] = this.users
+
   userDetail?: IUser
 
   sendDetailEmit (event: string) {
     const objDetail = this.users.find(obj => obj.name === event)
 
     this.userDetail = objDetail
+  }
+
+  playFilter (event: string) {
+    if(event === '') {
+      this.usersFiltered = this.users
+    } else {
+    this.usersFiltered = this.usersFiltered = this.users.filter(user => user.name === event)
+
+    }
+    
   }
 }

@@ -1,5 +1,5 @@
 <div class="flex-start">
-    <app-form-inputs></app-form-inputs>
-    <app-table-user [users]="users" (nameDetailEmit)="sendDetailEmit($event)"></app-table-user>
+    <app-form-inputs (filterEmitt)="playFilter($event)"></app-form-inputs>
+    <app-table-user [users]="usersFiltered" (nameDetailEmit)="sendDetailEmit($event)"></app-table-user>
     <app-detail-user [userDetail]="userDetail"></app-detail-user>
 </div>

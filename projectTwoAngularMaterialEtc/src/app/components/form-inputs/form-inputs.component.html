@@ -1,23 +1,23 @@
 <div class="div-form">
     <mat-form-field class="example-full-width">
         <mat-label>Nome</mat-label>
-        <input type="search" matInput>
+        <input type="search" matInput [(ngModel)]="valuesInput.name">
     </mat-form-field>
     
     <mat-form-field class="example-full-width">
         <mat-label>Data de Cadastro</mat-label>
         <input matInput>
-        <mat-icon matSuffix>mode_edit</mat-icon>
+        <mat-icon>date_range</mat-icon>
+
     </mat-form-field>
     
     <mat-form-field>
         <mat-label>Select</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="valuesInput.status">
           <mat-option value="ativo">Ativo</mat-option>
           <mat-option value="inativo">Inativo</mat-option>
         </mat-select>
     </mat-form-field>
 
-
-    <button mat-raised-button color="primary">Filtrar</button>
+    <button mat-raised-button color="primary" (click)="filter()">Filtrar</button>
 </div>
