@@ -103,8 +103,10 @@ export class AppComponent {
   playFilter (event: string) {
     if(event === '') {
       this.usersFiltered = this.users
+      this.userDetail = undefined
     } else {
     this.usersFiltered = this.usersFiltered = this.users.filter(user => user.name === event)
+    this.userDetail = undefined
 
     }
     
