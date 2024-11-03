@@ -6,6 +6,7 @@ import {MatInputModule} from '@angular/material/input';
 import { FormInputsComponent } from './form-inputs.component';
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
   declarations: [FormInputsComponent],
   imports: [
