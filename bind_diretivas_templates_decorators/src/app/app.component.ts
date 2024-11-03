@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { meuPipe } from './statusclass.pipe';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,21 @@ export class AppComponent {
   pessoa = {
     name: 'Daniel San',
   };
+  pessoas = [
+    {
+      name: 'Daniel San',
+      status: meuPipe.Active
+    },
+    {
+      name: 'Gabriel',
+      status: meuPipe.Blocked
+
+    },{
+      name: 'Fernando',
+      status: meuPipe.Partial
+
+    },
+  ]
 
   mudarStatus() {
     this.isActive = !this.isActive;

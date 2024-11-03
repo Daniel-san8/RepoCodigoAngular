@@ -44,3 +44,11 @@
 
 
 <app-person></app-person>
+
+
+<ng-container *ngFor="let pessoa of pessoas">
+  <div [ngClass]="pessoa.status | statusclass">
+    {{ pessoa.name }}
+  </div>
+</ng-container> 
+    
