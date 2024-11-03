@@ -8,6 +8,12 @@ import { IUser } from '../../models/user/user';
 })
 export class DetailUserComponent {
  @Input() userDetail?: IUser 
-
- 
+  entriesArr: [string, any][] = []
+ getValue () {
+  if(!this.userDetail) return null
+  const pairObj = Object.entries(this.userDetail)
+  this.entriesArr = pairObj
+  console.log(this.entriesArr)
+  return pairObj
+ }
 }

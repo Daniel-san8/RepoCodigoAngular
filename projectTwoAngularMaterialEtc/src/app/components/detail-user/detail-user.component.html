@@ -2,4 +2,10 @@
     <p>{{ userDetail.name }}</p>
     <p>{{ userDetail.status }}</p>
     <p>{{ userDetail['data_de_cadastro'] }}</p>
+
+    <div>
+        <p>{{ userDetail.endereco.rua }}</p>
+        <p>{{ userDetail.endereco.bairro }}</p>
+        <p>{{ userDetail.endereco.cidade }}</p>
+    </div>
 </div>
