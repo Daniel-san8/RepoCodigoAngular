@@ -9,8 +9,5 @@ import { IUser } from '../../models/user/user';
 export class DetailUserComponent {
  @Input() userDetail?: IUser 
 
- executar () {
-  console.log(this.userDetail)
- }
  
 }
