@@ -3,7 +3,7 @@
             <h4>Nome</h4>
     
         <ng-container *ngFor="let user of users">
-                <p class="relative">{{ user.name }}</p>
+                <p (click)="sendEmitter(user.name)" class="relative">{{ user.name }}</p>
         </ng-container>
     </div>
     <div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IUser } from '../../models/user/user';
 
 @Component({
   selector: 'app-detail-user',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './detail-user.component.scss'
 })
 export class DetailUserComponent {
+ @Input() userDetail?: IUser 
 
+ executar () {
+  console.log(this.userDetail)
+ }
+ 
 }

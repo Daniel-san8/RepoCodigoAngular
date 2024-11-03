@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { IUser } from '../../models/user/user';
 
 @Component({
   selector: 'app-table-user',
@@ -6,11 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './table-user.component.scss'
 })
 export class TableUserComponent {
-  users = [
-    {name: 'João Silva', 'data_de_cadastro': '01/08/2023', status: 'Inativo'},
-    {name: 'Maria Fernandes', 'data_de_cadastro': '05/08/2023', status: 'Inativo'},
-    {name: 'Carlos Pereira', 'data_de_cadastro': '10/08/2023', status: 'Ativo'},
-    {name: 'Ana Sousa', 'data_de_cadastro': '15/08/2023', status: 'Inativo'},
-    {name: 'Pedro Menezes', 'data_de_cadastro': '20/08/2023', status: 'Ativo'}
-  ]
+  
+
+  @Input({alias: 'users', required: true}) users: IUser[] = []
+  @Output('nameDetailEmit') detailEmitter = new EventEmitter<string>()
+
+  
+  sendEmitter (name: string) {
+    this.detailEmitter.emit(name)
+  }
 }
