@@ -1,6 +1,6 @@
 <div class="teste" *ngIf="userDetail">
     <p>{{ userDetail.name }}</p>
-    <p>{{ userDetail.status }}</p>
+    <p>{{ userDetail.status | status }}</p>
     <p>{{ userDetail['data_de_cadastro'] }}</p>
 
     <div>

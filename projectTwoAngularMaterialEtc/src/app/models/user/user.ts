@@ -1,7 +1,7 @@
 export interface IUser {
     name: string,
     data_de_cadastro: string,
-    status: string,
+    status: boolean ,
     endereco: IAddresUser,
     telefone: string,
     email: string,

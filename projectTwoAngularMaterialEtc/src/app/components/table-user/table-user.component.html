@@ -11,7 +11,7 @@
 
     <ng-container *ngFor="let user of users; let isLast = last">
         <p [ngClass]="{'linha': !isLast}"></p>
-        <p class="relative">{{ user['data_de_cadastro'] }}</p>
+        <p>{{ user['data_de_cadastro'] }}</p>
     </ng-container>
 
     </div>
@@ -19,7 +19,7 @@
         <h4>Status</h4>
 
     <ng-container *ngFor="let user of users">
-            <p class="relative">{{ user.status }}</p>
+            <p>{{ user.status }}</p>
     </ng-container>
     </div>
 </div>

@@ -4,12 +4,16 @@
         <input type="search" matInput [(ngModel)]="valuesInput.name">
     </mat-form-field>
     
-    <mat-form-field class="example-full-width">
-        <mat-label>Data de Cadastro</mat-label>
-        <input matInput>
-        <mat-icon>date_range</mat-icon>
-
-    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Selecione a data</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Data Inicial">
+          <input matEndDate placeholder="Data Final">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
     
     <mat-form-field>
         <mat-label>Select</mat-label>

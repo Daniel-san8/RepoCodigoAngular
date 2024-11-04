@@ -11,7 +11,7 @@ export class AppComponent {
     {
       name: 'João Silva',
       data_de_cadastro: '01/08/2023',
-      status: 'Inativo',
+      status: false,
       endereco: {
         rua: "Rua das Flores",
         numero: 123,
@@ -27,7 +27,7 @@ export class AppComponent {
     {
       name: 'Maria Fernandes',
       data_de_cadastro: '05/08/2023',
-      status: 'Inativo',
+      status: false,
       endereco: {
         rua: "Avenida Brasil",
         numero: 456,
@@ -43,7 +43,7 @@ export class AppComponent {
     {
       name: 'Carlos Pereira',
       data_de_cadastro: '10/08/2023',
-      status: 'Ativo',
+      status: true,
       endereco: {
         rua: "Travessa dos Pássaros",
         numero: 789,
@@ -59,7 +59,7 @@ export class AppComponent {
     {
       name: 'Ana Sousa',
       data_de_cadastro: '15/08/2023',
-      status: 'Inativo',
+      status: false,
       endereco: {
         rua: "Praça da Liberdade",
         numero: 101,
@@ -75,7 +75,7 @@ export class AppComponent {
     {
       name: 'Pedro Menezes',
       data_de_cadastro: '20/08/2023',
-      status: 'Ativo',
+      status: true,
       endereco: {
         rua: "Rua da Praia",
         numero: 202,
