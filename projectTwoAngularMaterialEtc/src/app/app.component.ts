@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IUser } from './models/user/user';
+import {Component} from '@angular/core';
+import {IUser} from './models/user/user';
 
 @Component({
   selector: 'app-root',
@@ -34,6 +34,7 @@ export class AppComponent {
         bairro: "Centro",
         cidade: "Rio de Janeiro",
         estado: "RJ",
+
         cep: "12345-678"
       },
       telefone: "(21) 91234-5678",
@@ -75,7 +76,9 @@ export class AppComponent {
     {
       name: 'Pedro Menezes',
       data_de_cadastro: '20/08/2023',
+
       status: true,
+
       endereco: {
         rua: "Rua da Praia",
         numero: 202,
@@ -88,27 +91,28 @@ export class AppComponent {
       email: "pedro.menezes@email.com",
       funcao: "Especialista em Segurança"
     }
+
   ];
 
   usersFiltered: IUser[] = this.users
 
   userDetail?: IUser
 
-  sendDetailEmit (event: string) {
+  sendDetailEmit(event: string) {
     const objDetail = this.users.find(obj => obj.name === event)
 
     this.userDetail = objDetail
   }
 
-  playFilter (event: string) {
-    if(event === '') {
+  playFilter(event: string) {
+    if (event === '') {
       this.usersFiltered = this.users
       this.userDetail = undefined
     } else {
-    this.usersFiltered = this.usersFiltered = this.users.filter(user => user.name === event)
-    this.userDetail = undefined
+      this.usersFiltered = this.usersFiltered = this.users.filter(user => user.name === event)
+      this.userDetail = undefined
 
     }
-    
+
   }
 }
