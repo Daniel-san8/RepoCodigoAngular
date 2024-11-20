@@ -1,11 +1,17 @@
-<input type="text" #myInput/>
+<!--<input type="text" #myInput/>-->
 
 
-valor: {{ myInput.value }}
+<!--valor: {{ myInput.value }}-->
 
-<div>
-  <input type="text" #myInput2/>
-  <span *ngIf="myInput2.value === 'apareça'">Apareci</span>
-</div>
+<!--<div>-->
+<!--  <input type="text" #myInput2/>-->
+<!--  <span *ngIf="myInput2.value === 'apareça'">Apareci</span>-->
+<!--</div>-->
 
-<button (click)="chamaInputEl()">clique</button>
+<!--<button (click)="chamaInputEl()">clique</button>-->
+
+<ng-container *ngFor="let button of arrButtons">
+  <button #meuButton (click)="changeColor($event)">{{ button }}</button>
+</ng-container>
+
+<button (click)="resetColor()">Resetar</button>
