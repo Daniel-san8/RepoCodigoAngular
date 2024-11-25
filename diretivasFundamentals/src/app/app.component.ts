@@ -4,6 +4,7 @@ import { SemDiretivasComponent } from './components/sem-diretivas/sem-diretivas.
 import { ComDiretivaComponent } from './components/com-diretiva/com-diretiva.component';
 import { StyleDirective } from './directives/style.directive';
 import { ListenerDirective } from './directives/listener.directive';
+import { InputBackgroundDirective } from './directives/input-background.directive';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { ListenerDirective } from './directives/listener.directive';
     ComDiretivaComponent,
     StyleDirective,
     ListenerDirective,
+    InputBackgroundDirective,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
