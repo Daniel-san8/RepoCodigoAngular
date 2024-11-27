@@ -5,6 +5,7 @@ import { ComDiretivaComponent } from './components/com-diretiva/com-diretiva.com
 import { StyleDirective } from './directives/style.directive';
 import { ListenerDirective } from './directives/listener.directive';
 import { InputBackgroundDirective } from './directives/input-background.directive';
+import { FocusSecondDirective } from './directives/focus-second.directive';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { InputBackgroundDirective } from './directives/input-background.directiv
     StyleDirective,
     ListenerDirective,
     InputBackgroundDirective,
+    FocusSecondDirective,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -25,7 +27,7 @@ export class AppComponent implements AfterViewInit {
 
   constructor(private readonly _elRef: ElementRef) {}
 
-  ngAfterViewInit(): undefined | void {
+  ngAfterViewInit() {
     if (!this.minhaDiv) return;
 
     this.minhaDiv.nativeElement.textContent = 'Nasci';
@@ -34,5 +36,12 @@ export class AppComponent implements AfterViewInit {
       '#minha-outra-div'
     ) as HTMLDivElement;
     minhaOutraDiv.textContent = 'opa';
+  }
+
+  createElement() {
+    const divEl = document.createElement('div');
+    divEl.textContent = 'NASCIIIIIIII';
+    divEl.classList.add('nasci');
+    this._elRef.nativeElement.appendChild(divEl);
   }
 }
