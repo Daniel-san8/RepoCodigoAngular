@@ -6,6 +6,7 @@ import { StyleDirective } from './directives/style.directive';
 import { ListenerDirective } from './directives/listener.directive';
 import { InputBackgroundDirective } from './directives/input-background.directive';
 import { FocusSecondDirective } from './directives/focus-second.directive';
+import { TesteServiceService } from './services/teste-service.service';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,14 @@ import { FocusSecondDirective } from './directives/focus-second.directive';
 export class AppComponent implements AfterViewInit {
   @ViewChild('minhaDiv') minhaDiv?: ElementRef<HTMLDivElement>;
 
-  constructor(private readonly _elRef: ElementRef) {}
+  constructor(
+    private readonly _elRef: ElementRef,
+    private readonly _testeService: TesteServiceService
+  ) {}
+
+  createDiv() {
+    this._testeService.create(this._elRef);
+  }
 
   ngAfterViewInit() {
     if (!this.minhaDiv) return;
