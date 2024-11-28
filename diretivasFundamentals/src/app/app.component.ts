@@ -7,6 +7,7 @@ import { ListenerDirective } from './directives/listener.directive';
 import { InputBackgroundDirective } from './directives/input-background.directive';
 import { FocusSecondDirective } from './directives/focus-second.directive';
 import { TesteServiceService } from './services/teste-service.service';
+import { XssComponent } from './components/xss/xss.component';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ import { TesteServiceService } from './services/teste-service.service';
     ListenerDirective,
     InputBackgroundDirective,
     FocusSecondDirective,
+    XssComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
