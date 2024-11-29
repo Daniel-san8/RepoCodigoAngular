@@ -23,5 +23,7 @@ export class XssComponent {
 
     this.renderer.appendChild(divEl, text);
     this.renderer.appendChild(this.elRef.nativeElement, divEl);
+    // this.renderer.setStyle(divEl, 'backgroundColor', 'red');
+    this.renderer.addClass(divEl, 'minhaClasseXss');
   }
 }
