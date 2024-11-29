@@ -14,7 +14,14 @@ export class XssComponent {
     const divEl = document.createElement('div');
     divEl.innerHTML = value;
     const nativeElementEl = this.elRef.nativeElement as HTMLDivElement;
+    this.renderer.appendChild(nativeElementEl, divEl);
+  }
 
-    nativeElementEl.appendChild(divEl);
+  createElementCorrect(value: string) {
+    const divEl = this.renderer.createElement('div') as HTMLDivElement;
+    const text = this.renderer.createText(value);
+
+    this.renderer.appendChild(divEl, text);
+    this.renderer.appendChild(this.elRef.nativeElement, divEl);
   }
 }
