@@ -11,6 +11,7 @@ import { Component, Input, numberAttribute } from '@angular/core';
 export class CardComponent {
   @Input({ required: true, alias: 'iconCard' }) iconCard = '';
   @Input({ required: true, alias: 'textCard' }) textCard = '';
-  @Input({ required: true, alias: 'valueCard', transform: numberAttribute })
+  @Input({ required: false, alias: 'valueCard', transform: numberAttribute })
   valueCard = 0;
+  // @Input({ required: true, alias: 'colorBg' }) colorBg = '';
 }

@@ -1,10 +1,9 @@
-<div class="bg-white d-flex flex-col">
-  <div class="bg-orange">
-    <div class="d-flex">
+<div class="bg-white d-flex rounded">
+  <div class="bg-orange d-flex rounded-top">
+    <div class="d-flex header-card">
       <img src="{{ iconCard }}" alt="icon card" />
       <span>{{ textCard }}</span>
     </div>
-
-    <span>{{ valueCard | currency : "BRL" }}</span>
+    <span class="weight-semi">{{ valueCard | currency : "BRL" }}</span>
   </div>
 </div>

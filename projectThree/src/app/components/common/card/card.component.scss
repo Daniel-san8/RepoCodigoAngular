@@ -8,8 +8,33 @@
 
 .bg-white {
   background-color: white;
+  min-height: 400px;
 }
 
 .bg-orange {
   background-color: orange;
+  height: 50px;
+  width: 100%;
+  font-weight: bold;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  img {
+    height: 30px;
+  }
+
+  .header-card {
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.rounded-top {
+  border-radius: 6px 6px 0 0;
+}
+.rounded {
+  border-radius: 6px;
+}
+.weight-semi {
+  font-weight: normal;
 }
