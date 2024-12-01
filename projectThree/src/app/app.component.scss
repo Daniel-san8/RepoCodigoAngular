@@ -5,4 +5,19 @@
   background-color: gray;
   height: 100vh;
   justify-content: center;
+  gap: 1rem;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+}
+
+.linha {
+  width: 95%;
+  color: gray;
+  border: 1px solid gray;
+  margin-bottom: 1rem;
 }

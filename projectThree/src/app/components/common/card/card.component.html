@@ -1,4 +1,4 @@
-<div class="bg-white d-flex rounded">
+<div class="bg-white d-flex flex-col items-center rounded">
   <div class="bg-orange d-flex rounded-top">
     <div class="d-flex header-card">
       <img src="{{ iconCard }}" alt="icon card" />
@@ -6,4 +6,5 @@
     </div>
     <span class="weight-semi">{{ valueCard | currency : "BRL" }}</span>
   </div>
+  <ng-content></ng-content>
 </div>
