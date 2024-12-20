@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { CardComponent } from './card/card.component';
 import { MeuCompComponent } from './meu-comp/meu-comp.component';
+import { NgIf, NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CardComponent, MeuCompComponent],
+  imports: [CardComponent, MeuCompComponent, NgTemplateOutlet, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent {
+  condition = false;
+}
