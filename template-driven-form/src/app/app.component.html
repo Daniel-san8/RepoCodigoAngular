@@ -1,0 +1,13 @@
+<!-- <input type="text" [(ngModel)]="opa.name" /> -->
+
+<input
+  type="text"
+  ngModel
+  #meuInputFormControl="ngModel"
+  required
+  minlength="5"
+/>
+
+<p>Válido: {{ meuInputFormControl.valid }}</p>
+<p>Tocado: {{ meuInputFormControl.touched }}</p>
+<p>Sujo: {{ meuInputFormControl.dirty }}</p>
