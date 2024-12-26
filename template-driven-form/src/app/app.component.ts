@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { FormsModule, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,14 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  opa = {
-    name: 'aa',
-  };
+export class AppComponent implements AfterViewInit {
+  @ViewChild('meuInputFormControl') inputEl?: NgModel;
+
+  ngAfterViewInit(): void {}
+
+  send() {
+    if (this.inputEl?.valid && this.inputEl.touched) {
+      console.log(this.inputEl);
+    }
+  }
 }
