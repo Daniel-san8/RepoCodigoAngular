@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { FormsModule, NgModel } from '@angular/forms';
+import { ControlContainer, FormsModule, NgForm, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,9 @@ import { FormsModule, NgModel } from '@angular/forms';
   imports: [FormsModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  viewProviders: [{
+    provide: ControlContainer, useExisting: NgForm
+  }]
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('meuInputFormControl') inputEl?: NgModel;
