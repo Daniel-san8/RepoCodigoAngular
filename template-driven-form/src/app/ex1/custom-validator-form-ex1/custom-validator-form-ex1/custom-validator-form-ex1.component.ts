@@ -14,5 +14,5 @@ import { InvalidValidatorDirective } from '../../directives/invalid-validator.di
   }]
 })
 export class CustomValidatorFormEx1Component {
-
+constructor () {}
 }
