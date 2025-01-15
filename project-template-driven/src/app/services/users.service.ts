@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
-  private readonly usersList = [
+  private readonly usersList: any = [
     {
       name: 'Usuario 1',
       username: 'usuario 1',
@@ -65,5 +66,14 @@ export class UsersService {
       ]
     }
   ]
+
+  getUsers() {
+    return new Observable((observer) => {
+      setTimeout(() => {
+        observer.next(this.usersList)
+        observer.complete()
+      }, 3000)
+    })
+  }
   constructor() { }
 }
