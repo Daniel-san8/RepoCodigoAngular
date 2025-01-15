@@ -7,65 +7,45 @@ import { Observable, of } from 'rxjs';
 export class UsersService {
   private readonly usersList: any = [
     {
-      name: 'Usuario 1',
-      username: 'usuario 1',
-      email: 'usuario@example.com',
+      name: 'Usuário 1',
+      username: 'usuario1',
+      email: 'usuario1@example.com',
       password: 'senha1',
-      birthDate: '01/12/1998',
+      birthDate: '01/12/1990',
       state: 13,
       musics: [
-        {
-          title: 'Música 1', band: 'Banda A', genre: 8, isFavorite: false
-        },
-        {
-          title: 'Música 2', band: 'Banda B', genre: 11, isFavorite: false
-        },
-        {
-          title: 'Música 3', band: 'Banda C', genre: 9, isFavorite: true
-        }
-      ]
+        { title: 'Música 1', band: 'Banda A', genre: 8, isFavorite: false },
+        { title: 'Música 2', band: 'Banda B', genre: 11, isFavorite: false },
+        { title: 'Música 3', band: 'Banda C', genre: 9, isFavorite: true },
+      ],
     },
-
     {
-      name: 'Usuario 2',
-      username: 'usuario 2',
-      email: 'usuario@example.com',
-      password: 'senha1',
-      birthDate: '01/12/1998',
-      state: 13,
+      name: 'Usuário 2',
+      username: 'usuario2',
+      email: 'usuario2@example.com',
+      password: 'senha2@44',
+      birthDate: '02/02/1995',
+      state: 50,
       musics: [
-        {
-          title: 'Música 3', band: 'Banda D', genre: 1, isFavorite: false
-        },
-        {
-          title: 'Música 4', band: 'Banda E', genre: 7, isFavorite: true
-        },
-        {
-          title: 'Música 5', band: 'Banda F', genre: 12, isFavorite: false
-        }
-      ]
+        { title: 'Música 4', band: 'Banda X', genre: 1, isFavorite: false },
+        { title: 'Música 5', band: 'Banda Y', genre: 7, isFavorite: true },
+        { title: 'Música 6', band: 'Banda Z', genre: 12, isFavorite: false },
+      ],
     },
-
     {
-      name: 'Usuario 3',
-      username: 'usuario 3',
-      email: 'usuario@example.com',
-      password: 'senha1@#11111',
-      birthDate: '01/12/1998',
-      state: 13,
+      name: 'Usuário 3',
+      username: 'usuario3',
+      email: 'usuario3@example.com',
+      password: 'senha3@123@122',
+      birthDate: '03/03/2000',
+      state: 42,
       musics: [
-        {
-          title: 'Música 7', band: 'Banda Z', genre: 8, isFavorite: true
-        },
-        {
-          title: 'Música 8', band: 'Banda Y', genre: 11, isFavorite: false
-        },
-        {
-          title: 'Música 9', band: 'Banda X', genre: 9, isFavorite: false
-        }
-      ]
-    }
-  ]
+        { title: 'Easy', band: 'Commodores', genre: 2, isFavorite: true },
+        { title: 'True', band: 'Spandau Ballet', genre: 2, isFavorite: false },
+        { title: "If You Don't Know Me by Now", band: 'Simply Red', genre: 2, isFavorite: false },
+      ],
+    },
+]
 
   getUsers() {
     return new Observable((observer) => {
