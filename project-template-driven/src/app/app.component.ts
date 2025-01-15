@@ -38,7 +38,6 @@ export class AppComponent implements OnInit {
   private getStates () {
     this._statesService.getStates().subscribe(listState => {
       this.statesList = listState
-      console.log(this.statesList)
     })
   }
 }
